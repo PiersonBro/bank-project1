@@ -20,7 +20,7 @@ private:
 
 public:
 	double getBalance();
-	//Customer getCustomer();
+	Customer * getCustomer();
 	string to_string();   // what does this do ?
 	void setCustomer(Customer* newcustomer);
 	void setBalance(int newbalance);

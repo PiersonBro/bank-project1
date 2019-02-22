@@ -9,10 +9,10 @@ double Account::getBalance()
 	return balance;
 }
 
-//Customer Account::getCustomer()
-//{
-	//return Customer();
-//}
+Customer * Account::getCustomer()
+{
+	return customer;
+}
 
 string Account::to_string()
 {

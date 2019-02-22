@@ -1,3 +1,7 @@
+///////////////////////
+// name: Karen and Ezekiel
+// last date modified: 2/21/2019
+////////////////////////
 #ifndef Transaction_h
 #define Transaction_h
 #include <iostream>

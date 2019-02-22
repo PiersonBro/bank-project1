@@ -1,3 +1,7 @@
+///////////////////////
+// name: Karen and Ezekiel
+// last date modified: 2/21/2019
+////////////////////////
 #include "Account.h"
 
 double Account::getBalance()
@@ -5,10 +9,10 @@ double Account::getBalance()
 	return balance;
 }
 
-Customer Account::getCustomer()
-{
-	return Customer();
-}
+//Customer Account::getCustomer()
+//{
+	//return Customer();
+//}
 
 string Account::to_string()
 {

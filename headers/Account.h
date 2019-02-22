@@ -1,3 +1,8 @@
+///////////////////////
+// name: Karen and Ezekiel
+// last date modified: 2/21/2019
+////////////////////////
+
 #include <iostream>
 using namespace std;
 #ifndef Account_h
@@ -15,7 +20,7 @@ private:
 
 public:
 	double getBalance();
-	Customer getCustomer();
+	//Customer getCustomer();
 	string to_string();   // what does this do ?
 	void setCustomer(Customer* newcustomer);
 	void setBalance(int newbalance);

@@ -1,4 +1,4 @@
-#include "CheckingsAccoun.h"
+#include "CheckingsAccount.h"
 
 double CheckingsAccount::deposit(Transaction transaction)
 {

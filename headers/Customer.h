@@ -4,6 +4,8 @@
 ////////////////////////
 
 #include <string>
+#ifndef Customer_h
+#define Customer_h
 using namespace std;
 
 class Customer {
@@ -24,6 +26,7 @@ class Customer {
             this->TelNum = TelNum;
             this->AccountNum = AccountNum;
         }
+        
     void setName(string newName);
     string getName();
     void setAddress(string newAddress);
@@ -38,3 +41,5 @@ class Customer {
     virtual int getCheckCharge() = 0;
     virtual int getOverdraftPenalty() = 0;
 };
+
+#endif

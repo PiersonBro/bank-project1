@@ -7,6 +7,8 @@
 #include "Customer.h"
 
 class Student: public Customer {
+    public:
+     Student(string name, string address, int age, int TelNum, int AccountNum);
     virtual double getSavingsInterest();
     virtual double getCheckInterest();
     virtual int getCheckCharge();

@@ -3,17 +3,21 @@
 // last date modified: 2/21/2019
 ////////////////////////
 #include "Senior.h"
+#include <string>
+
+Senior::Senior(string name, string address, int age, int TelNum, int AccountNum) :Customer( name,  address,  age, TelNum, AccountNum) {}
+
 
 double Senior::getSavingsInterest() {
-    return 2.5;
+    return 0.025;
 }
 
 double Senior::getCheckInterest() {
-    return 1;
+    return 0.01;
 }
 
 int Senior::getCheckCharge() {
-    return 5;
+    return 0.05;
 }
 
 int Senior::getOverdraftPenalty() {

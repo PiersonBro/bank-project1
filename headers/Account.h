@@ -12,7 +12,7 @@ using namespace std;
 #include "Customer.h"
 
 #include "Transaction.h"
-
+// The Account class represents the amount of money a customer has given to the bank.
 class Account {
 private:
 	Customer* customer;
@@ -21,14 +21,14 @@ private:
 protected:
 		vector<Transaction> transactions;
 public:
- Account ( Customer* customer ,int  balance, int accountNum)
- {
-	 this->customer = customer;
-    this-> balance = balance;
-	this -> accountNum = accountNum;
- }
+	// Construct an account object (note you actually want a subcalss such as CheckingsAccount or SavingsAccount)
+	// Customer - the customer who owns the account.
+	// balance - the initial amount of money in the account.
+	// accountNum - the unqiue ID number associated with the account.
+ 	Account ( Customer* customer ,int  balance, int accountNum);
 	// The current balance in the account.
 	double getBalance();
+	// Get the customer who owns this account. 
 	Customer * getCustomer();
 	// Return name, age, and account number
 	string to_string();
@@ -36,7 +36,5 @@ public:
 	void setCustomer(Customer* newcustomer);
 	// Set the balance.
 	void setBalance(Transaction transaction);
-
-
 };
 #endif

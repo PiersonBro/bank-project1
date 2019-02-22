@@ -4,6 +4,12 @@
 ////////////////////////
 #include "Account.h"
 
+Account::Account(Customer* customer, int balance, int accountNum) {
+	this->customer = customer;
+    this-> balance = balance;
+	this -> accountNum = accountNum;
+ }
+
 double Account::getBalance()
 {
 	return balance;

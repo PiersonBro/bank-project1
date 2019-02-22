@@ -7,6 +7,8 @@
 #include "Customer.h"
 #include <string> 
 
+// A concrete subclass of customer.
+// Defines the associated interest rates and fees for this type of customer
 class Adult: public Customer {
     public: 
     Adult(string name, string address, int age, int TelNum, int AccountNum);

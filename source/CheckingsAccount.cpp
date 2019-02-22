@@ -4,6 +4,8 @@
 ////////////////////////
 #include "CheckingsAccount.h"
 
+CheckingsAccount::CheckingsAccount (Customer* customer ,int  balance, int accountNum): Account (customer, balance, accountNum) {}
+
 double CheckingsAccount::deposit(Transaction transaction)
 {
 	transactions.push_back(transaction);

@@ -4,6 +4,8 @@
 ////////////////////////
 #include "SavingsAccount.h"
 
+SavingsAccount::SavingsAccount ( Customer* customer, int balance, int accountNum): Account  (customer, balance, accountNum) {}
+
 double SavingsAccount::deposit(Transaction transaction)
 {
 	transactions.push_back(transaction);
@@ -22,5 +24,5 @@ double SavingsAccount::addInterest()
 	Transaction transaction(0, "addInterest", amount, "");
 	transactions.push_back(transaction);
 	this->setBalance(transaction);
-	return 0;
+	return amount ;
 }

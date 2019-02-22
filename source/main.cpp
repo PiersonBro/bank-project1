@@ -41,6 +41,12 @@ bank.addAccount(&sSenior1);
 
 //-------------------making transactions in the account ---------
 
+bank.MakeDeposit (200,&cStudent1);
+cout << "Your balance is " << cStudent1.getBalance();
+cout << student1.getName() << " has just made a deposit" << endl; 
+cStudent1.setBalance()
+cout <<  " your new balance is $" << cStudent1.getBalance()-
+
 
 
 

@@ -9,8 +9,8 @@
 class CheckingsAccount: protected Account {
 public:
  	CheckingsAccount (Customer* customer ,int  balance, int accountNum);
-	double deposit(Transaction transaction);
-	double withdraw(Transaction transaction);
-	double addInterest();
+	virtual double deposit(Transaction transaction);
+	virtual double withdraw(Transaction transaction);
+	virtual double addInterest();
 };
 #endif 

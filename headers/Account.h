@@ -19,13 +19,14 @@ private:
 	int accountNum;
 protected:
 		vector<Transaction> transactions;
+		// For subclass use only set the account balance.
+		void setBalance(Transaction transaction);
 public:
 
 	// Construct an account object (note you actually want a subcalss such as CheckingsAccount or SavingsAccount)
 	// Customer - the customer who owns the account.
 	// balance - the initial amount of money in the account.
 	// accountNum - the unqiue ID number associated with the account.
-
  	Account ( Customer* customer ,int  balance, int accountNum);
 	// The current balance in the account.
 	double getBalance();
@@ -35,7 +36,8 @@ public:
 	string to_string();
 	// Set the customer who owns the account.
 	void setCustomer(Customer* newcustomer);
-	// Set the balance.
-	void setBalance(Transaction transaction);
+	virtual double deposit(Transaction transaction) = 0;
+	virtual double withdraw(Transaction transaction) = 0;
+	virtual double addInterest() = 0;
 };
 #endif

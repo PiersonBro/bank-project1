@@ -11,12 +11,12 @@
 using namespace std;
 class Bank {
 private: 
-	vector<Account> accVector;
+	vector<Account *> accVector;
 public:
-	void addAccount(Account account);
-	double MakeDeposit(double amount, Account account);
-	double MakeWithdrawal(double amount, Account account);
-	Account GetAccount(Customer * customer);
+	void addAccount(Account * account);
+	double MakeDeposit(double amount, Account * account);
+	double MakeWithdrawal(double amount, Account * account);
+	Account * GetAccount(Customer * customer);
 	Bank();
 };
 #endif

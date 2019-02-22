@@ -15,7 +15,7 @@ double Student::getCheckInterest() {
 }
 
 int Student::getCheckCharge() {
-    return 0.05;
+    return 0;
 }
 
 int Student::getOverdraftPenalty() {

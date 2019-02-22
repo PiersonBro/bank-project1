@@ -16,7 +16,7 @@ double Adult::getCheckInterest() {
 }
 
 int Adult::getCheckCharge() {
-    return 0.05;
+    return 3;
 }
 
 int Adult::getOverdraftPenalty() {

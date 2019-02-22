@@ -17,7 +17,7 @@ double Senior::getCheckInterest() {
 }
 
 int Senior::getCheckCharge() {
-    return 0.05;
+    return 1;
 }
 
 int Senior::getOverdraftPenalty() {

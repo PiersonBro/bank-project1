@@ -18,7 +18,7 @@ double SavingsAccount::withdraw(Transaction transaction)
 
 double SavingsAccount::addInterest()
 {
-	double amount = getCustomer()->getSavingsInterest() * getBalance();
+	double amount = getCustomer()->getSavingsInterest() * getBalance() + getBalance();
 	Transaction transaction(0, "addInterest", amount, "");
 	transactions.push_back(transaction);
 	this->setBalance(transaction);

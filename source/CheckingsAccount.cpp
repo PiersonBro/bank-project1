@@ -18,7 +18,7 @@ double CheckingsAccount::withdraw(Transaction transaction)
 
 double CheckingsAccount::addInterest()
 {
-	double amount = getCustomer()->getSavingsInterest() * getBalance();
+	double amount = getCustomer()->getCheckInterest() * getBalance() + getBalance();
 	Transaction transaction(0, "addInterest", amount, "");
 	transactions.push_back(transaction);
 	this->setBalance(transaction);

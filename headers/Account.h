@@ -1,6 +1,6 @@
 ///////////////////////
 // name: Karen and Ezekiel
-// last date modified: 2/21/2019
+// last date modified: 2/22/2019
 ////////////////////////
 
 #include <iostream>
@@ -10,7 +10,6 @@ using namespace std;
 #define Account_h
 
 #include "Customer.h"
-
 #include "Transaction.h"
 
 class Account {
@@ -21,6 +20,7 @@ private:
 protected:
 		vector<Transaction> transactions;
 public:
+// constructor that takes in a student, adult or senior, the balance and account number
  Account ( Customer* customer ,int  balance, int accountNum)
  {
 	 this->customer = customer;

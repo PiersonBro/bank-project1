@@ -31,14 +31,14 @@ Student c1( "mike", "over there", 18, 121212121, 78745);
 CheckingsAccount p1( &c1, 500, 78745 );
 Transaction t1 ( 12121, " getting money", 500, "this is a fee ");
 
-cout << " you took out $" << p1.withdraw(t1) << endl;
-cout << " with intrest it will be $" << p1.addInterest() << endl;
+cout << "you took out $" << p1.withdraw(t1) << endl;
+cout << "with intrest it will be $" << p1.addInterest() << endl;
 
 Senior s1( " senior1", "there", 75, 78787878, 65656);
 SavingsAccount Ss1 (&s1, 800, 45465);
 Transaction t2 ( 78787, " saving money", 800, "this is a fee");
 
-cout << " you deposited $" << Ss1.deposit(t2) << endl;
+cout << "you deposited $" << Ss1.deposit(t2) << endl;
 cout << "with interest it will be $" << Ss1.addInterest();
 
 

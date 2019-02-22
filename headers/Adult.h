@@ -9,6 +9,7 @@
 
 class Adult: public Customer {
     public: 
+    // construtor inherited from  customer 
     Adult(string name, string address, int age, int TelNum, int AccountNum);
     virtual double getSavingsInterest();
     virtual double getCheckInterest();

@@ -9,6 +9,7 @@ SavingsAccount::SavingsAccount ( Customer* customer, int balance, int accountNum
 double SavingsAccount::deposit(Transaction transaction)
 {
 	transactions.push_back(transaction);
+
 	return transaction.getAmount();
 }
 
@@ -25,4 +26,5 @@ double SavingsAccount::addInterest()
 	transactions.push_back(transaction);
 	this->setBalance(transaction);
 	return amount ;
+	
 }

@@ -6,17 +6,18 @@
 #ifndef Bank_h
 #define Bank_h
 #include "Account.h"
+#include <vector>
 
 using namespace std;
 class Bank {
 private: 
-	Account* accArray[];
+	vector<Account> accVector;
 public:
-	Account* addAccount();
-	double MakeDeposit();
-	double MakeWithdrawal();
-	Account* GetAccount();
-
+	void addAccount(Account account);
+	double MakeDeposit(double amount, Account account);
+	double MakeWithdrawal(double amount, Account account);
+	Account GetAccount(Customer * customer);
+	Bank();
 };
 #endif
 

@@ -1,6 +1,6 @@
 ///////////////////////
 // name: Karen and Ezekiel
-// last date modified: 2/21/2019
+// last date modified: 2/22/2019
 ////////////////////////
 
 #include <string>
@@ -26,7 +26,7 @@ class Customer {
             this->TelNum = TelNum;
             this->AccountNum = AccountNum;
         }
-        
+    // getters and setters to make a new account for a customer 
     void setName(string newName);
     string getName();
     void setAddress(string newAddress);

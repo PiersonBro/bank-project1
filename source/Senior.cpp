@@ -4,7 +4,7 @@
 ////////////////////////
 #include "Senior.h"
 #include <string>
-
+//cosntructor inherited from customer class 
 Senior::Senior(string name, string address, int age, int TelNum, int AccountNum) :Customer( name,  address,  age, TelNum, AccountNum) {}
 
 

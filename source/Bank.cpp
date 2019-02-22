@@ -14,6 +14,19 @@ void Bank::addAccount(Account * account) {
     accVector.push_back(account);
 }
 
+Account * Bank::createAccount(Customer * customer, double initialDeposit, bool savings) {
+    if (savings) {
+         Account * acc = new SavingsAccount(customer, initialDeposit, customer->getAccountNum());
+        addAccount(acc);
+        return acc;
+    } else {
+        Account * acc = new CheckingsAccount(customer, initialDeposit, customer->getAccountNum());
+        addAccount(acc);
+        return acc;
+    }
+  
+}
+
 double Bank::MakeDeposit(double amount, Account * account) {
     // I consulted https://docs.microsoft.com/en-us/cpp/cpp/try-throw-and-catch-statements-cpp?view=vs-2017
     // to get the throw syntax right.

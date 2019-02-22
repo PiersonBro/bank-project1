@@ -6,7 +6,7 @@
 #define SavingsAccount_h
 #include "Account.h"
 
-class SavingsAccount: protected Account {
+class SavingsAccount: public Account {
 public:
 	SavingsAccount ( Customer* customer, int balance, int accountNum);
 	virtual double deposit(Transaction transaction);

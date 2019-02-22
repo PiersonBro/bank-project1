@@ -16,9 +16,8 @@ Customer * Account::getCustomer()
 
 string Account::to_string()
 {
-	// return name, age id and account number
 	// I had to look up the to_string function on C++ reference.
-	string displayString = customer->getName() + " " + std::to_string(customer->getAccountNum());
+	string displayString = "Name: " + customer->getName() + " Age: " + std::to_string(customer->getAge()) + " account number: " + std::to_string(customer->getAccountNum());
 	return displayString;
 }
 

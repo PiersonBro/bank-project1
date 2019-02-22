@@ -21,10 +21,14 @@ private:
 protected:
 		vector<Transaction> transactions;
 public:
+	// The current balance in the account.
 	double getBalance();
 	Customer * getCustomer();
-	string to_string();   // what does this do ?
+	// Return name, age, and account number
+	string to_string();
+	// Set the customer who owns the account.
 	void setCustomer(Customer* newcustomer);
+	// Set the balance.
 	void setBalance(Transaction transaction);
 
 

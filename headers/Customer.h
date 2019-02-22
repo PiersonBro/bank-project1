@@ -31,6 +31,8 @@ class Customer {
     string getName();
     void setAddress(string newAddress);
     string getAddress();
+    int getAge();
+    void setAge(int age);
     void setTelNum(int newTelNum);
     int getTelNum();
     void setAccountNum(int newAccountNum);

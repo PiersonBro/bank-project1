@@ -12,6 +12,14 @@ string Customer::getName() {
     return name;
 }
 
+void Customer::setAge(int age) {
+    this->age = age;
+}
+
+int Customer::getAge() {
+    return age;
+}
+
 void Customer::setAddress(string newAddress) {
     address = newAddress;
 }

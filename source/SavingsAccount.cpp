@@ -9,13 +9,22 @@ SavingsAccount::SavingsAccount ( Customer* customer, int balance, int accountNum
 double SavingsAccount::deposit(Transaction transaction)
 {
 	transactions.push_back(transaction);
-
-	return transaction.getAmount();
+	double amount = transaction.getAmount() + getBalance();
+	Transaction t(0, "deposit", amount, "");
+	setBalance(t);
+	return getBalance();
 }
 
 double SavingsAccount::withdraw(Transaction transaction)
 {
 	transactions.push_back(transaction);
+	double amount = getBalance() - transaction.getAmount();
+	string fees = "";
+	if (amount < 0) {
+		amount = amount - getCustomer()->getOverdraftPenalty();
+		fees = "A fee of $" + std::to_string(getCustomer()->getOverdraftPenalty()) + " was added.";
+	}
+	Transaction t(0, "withdraw", amount, fees);
 	return transaction.getAmount();
 }
 
@@ -25,6 +34,5 @@ double SavingsAccount::addInterest()
 	Transaction transaction(0, "addInterest", amount, "");
 	transactions.push_back(transaction);
 	this->setBalance(transaction);
-	return amount ;
-	
+	return getBalance();
 }

@@ -8,7 +8,7 @@
 
 class SavingsAccount: protected Account {
 public:
-SavingsAccount ( Customer* customer, int balance, int accountNum);
+	SavingsAccount ( Customer* customer, int balance, int accountNum);
 	double deposit(Transaction transaction);
 	double withdraw(Transaction transaction);
 	double addInterest();

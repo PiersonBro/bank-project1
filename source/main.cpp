@@ -38,8 +38,10 @@ Senior s1( " senior1", "there", 75, 78787878, 65656);
 SavingsAccount Ss1 (&s1, 800, 45465);
 Transaction t2 ( 78787, " saving money", 800, "this is a fee");
 
-cout << "you deposited $" << Ss1.deposit(t2) << endl;
-cout << "with interest it will be $" << Ss1.addInterest();
+cout << " you deposited $" << Ss1.deposit(t2) << endl;
+cout << "with interest it will be $" << Ss1.addInterest() << endl;
+cout << "What happens if we withdraw more than is in the account?" << endl;
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////

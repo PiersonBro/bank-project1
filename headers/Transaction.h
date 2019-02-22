@@ -16,6 +16,5 @@ private:
 public:
 	Transaction(int customerNumber, string transactionType, double amount, string fees);
 	double getAmount();
-	 //processTrans();
 };
 #endif

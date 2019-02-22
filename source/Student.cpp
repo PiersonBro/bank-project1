@@ -5,7 +5,7 @@
 #include "Student.h"
 #include <string>
 
-Student::Student(string name, string address, int age, int TelNum, int AccountNum) :Customer( name,  address,  age, TelNum, AccountNum) {}
+Student::Student(string name, string address, int age, int TelNum) :Customer( name,  address,  age, TelNum) {}
 double Student::getSavingsInterest() {
     return 0.035 ;
 }

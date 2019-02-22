@@ -6,7 +6,7 @@
 #include "Adult.h"
 #include <string>
 // constructor inherited from customer abstract class 
-Adult::Adult (string name, string address, int age, int TelNum, int AccountNum) :Customer( name,  address,  age, TelNum, AccountNum) {}
+Adult::Adult (string name, string address, int age, int TelNum) :Customer( name,  address,  age, TelNum) {}
 
 double Adult::getSavingsInterest() {
     return 0.03;

@@ -35,10 +35,9 @@ void Customer::setTelNum(int newTelNum) {
 int Customer::getTelNum() {
     return TelNum;
 }
-void Customer::setAccountNum(int newAccountNum) {
-    AccountNum = newAccountNum;
-}
 
 int Customer::getAccountNum() {
-    return AccountNum;
+    // Ezekiel learned how to call hash using stackoverflow
+    // https://stackoverflow.com/questions/8094790/how-to-get-hash-code-of-a-string-in-c
+    return std::hash<string>()(name) << std::hash<int>()(age) << std::hash<string>()(address) << std::hash<int>()(TelNum);
 }

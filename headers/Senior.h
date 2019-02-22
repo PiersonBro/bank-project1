@@ -12,7 +12,7 @@
 class Senior: public Customer {
     public: 
     // constructor inherited from customer 
-    Senior(string name, string address, int age, int TelNum, int AccountNum);
+    Senior(string name, string address, int age, int TelNum);
     //  interest rates in percentages and $
     virtual double getSavingsInterest();
     virtual double getCheckInterest();

@@ -6,15 +6,21 @@
 
 double SavingsAccount::deposit(Transaction transaction)
 {
+	transactions.push_back(transaction);
 	return transaction.getAmount();
 }
 
-double SavingsAccount::withdraw(Transaction transaction2)
+double SavingsAccount::withdraw(Transaction transaction)
 {
-	return transaction2.getAmount();
+	transactions.push_back(transaction);
+	return transaction.getAmount();
 }
 
-double SavingsAccount::addInterest(Transaction transaction3)
+double SavingsAccount::addInterest()
 {
+	double amount = getCustomer()->getSavingsInterest() * getBalance();
+	Transaction transaction(0, "addInterest", amount, "");
+	transactions.push_back(transaction);
+	this->setBalance(transaction);
 	return 0;
 }

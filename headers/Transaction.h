@@ -4,15 +4,17 @@
 ////////////////////////
 #ifndef Transaction_h
 #define Transaction_h
-#include <iostream>
+#include <string>
+
 using namespace std;
 class Transaction {
 private:
 	int CustomerNumber;
-	string TransactionType;
+	string transactionType;
 	double Amount;
 	string Fees;
 public:
+	Transaction(int customerNumber, string transactionType, double amount, string fees);
 	double getAmount();
 	 //processTrans();
 };

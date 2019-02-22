@@ -6,10 +6,10 @@
 #define CheckingsAccount_h
 #include "Account.h"
 
-class CheckingsAccount {
+class CheckingsAccount: protected Account {
 public:
 	double deposit(Transaction transaction);
-	double withdraw(Transaction transaction2);
-	double addInterest(Transaction transaction3);
+	double withdraw(Transaction transaction);
+	double addInterest();
 };
 #endif 

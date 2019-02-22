@@ -17,7 +17,9 @@ Customer * Account::getCustomer()
 string Account::to_string()
 {
 	// return name, age id and account number
-	return string();
+	// I had to look up the to_string function on C++ reference.
+	string displayString = customer->getName() + " " + std::to_string(customer->getAccountNum());
+	return displayString;
 }
 
 void Account::setCustomer(Customer* newcustomer)
@@ -25,7 +27,7 @@ void Account::setCustomer(Customer* newcustomer)
 	customer = newcustomer;
 }
 
-void Account::setBalance(int newbalance)
+void Account::setBalance(Transaction transaction)
 {
-	balance = newbalance;
+	balance = transaction.getAmount();
 }

@@ -4,11 +4,13 @@
 ////////////////////////
 
 #include <iostream>
+#include <vector>
 using namespace std;
 #ifndef Account_h
 #define Account_h
 
 #include "Customer.h"
+
 #include "Transaction.h"
 
 class Account {
@@ -16,14 +18,14 @@ private:
 	Customer* customer;
 	int balance;
 	int accountNum;
-	Transaction* TransArray[];
-
+protected:
+		vector<Transaction> transactions;
 public:
 	double getBalance();
 	Customer * getCustomer();
 	string to_string();   // what does this do ?
 	void setCustomer(Customer* newcustomer);
-	void setBalance(int newbalance);
+	void setBalance(Transaction transaction);
 
 
 };

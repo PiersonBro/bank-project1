@@ -6,16 +6,21 @@
 
 double CheckingsAccount::deposit(Transaction transaction)
 {
+	transactions.push_back(transaction);
 	return transaction.getAmount();
 }
 
-double CheckingsAccount::withdraw(Transaction transaction2)
+double CheckingsAccount::withdraw(Transaction transaction)
 {
-	return transaction2.getAmount();
+	transactions.push_back(transaction);
+	return transaction.getAmount();
 }
 
-double CheckingsAccount::addInterest(Transaction transaction3)
+double CheckingsAccount::addInterest()
 {
-	//add monthly or yearly interest rate
+	double amount = getCustomer()->getSavingsInterest() * getBalance();
+	Transaction transaction(0, "addInterest", amount, "");
+	transactions.push_back(transaction);
+	this->setBalance(transaction);
 	return 0;
 }

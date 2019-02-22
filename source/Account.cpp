@@ -5,9 +5,9 @@ double Account::getBalance()
 	return balance;
 }
 
-Customer Account::getCustomer()
+Customer * Account::getCustomer()
 {
-	return Customer();
+	return customer;
 }
 
 string Account::to_string()

@@ -38,6 +38,7 @@ class Customer {
     void setAccountNum(int newAccountNum);
     int getAccountNum();
 
+// set to be abstract so that each subclass can set their functions for themselves 
     virtual double getSavingsInterest() = 0;
     virtual double getCheckInterest() = 0;
     virtual int getCheckCharge() = 0;

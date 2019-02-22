@@ -22,5 +22,5 @@ double CheckingsAccount::addInterest()
 	Transaction transaction(0, "addInterest", amount, "");
 	transactions.push_back(transaction);
 	this->setBalance(transaction);
-	return 0;
+	return amount;
 }

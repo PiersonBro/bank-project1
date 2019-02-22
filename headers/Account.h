@@ -21,6 +21,12 @@ private:
 protected:
 		vector<Transaction> transactions;
 public:
+ Account ( Customer* customer ,int  balance, int accountNum)
+ {
+	 this->customer = customer;
+    this-> balance = balance;
+	this -> accountNum = accountNum;
+ }
 	// The current balance in the account.
 	double getBalance();
 	Customer * getCustomer();

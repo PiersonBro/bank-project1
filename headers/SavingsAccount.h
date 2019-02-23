@@ -5,7 +5,8 @@
 #ifndef SavingsAccount_h
 #define SavingsAccount_h
 #include "Account.h"
-
+// SavingsAccount is a concrete subclass of account.
+// See account for more documentation
 class SavingsAccount: public Account {
 public:
 	SavingsAccount ( Customer* customer, int balance, int accountNum);

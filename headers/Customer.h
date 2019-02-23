@@ -7,7 +7,7 @@
 #ifndef Customer_h
 #define Customer_h
 using namespace std;
-
+// The abstract customer class defines the basic behavior common to all customer types: student adult and senior.
 class Customer {
     private:
         string name;
@@ -35,7 +35,7 @@ class Customer {
     int getTelNum();
     int getAccountNum();
 
-// set to be abstract so that each subclass can set their functions for themselves 
+    // set to be abstract so that each subclass can set their functions for themselves 
     virtual double getSavingsInterest() = 0;
     virtual double getCheckInterest() = 0;
     virtual int getCheckCharge() = 0;

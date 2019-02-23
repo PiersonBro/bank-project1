@@ -7,6 +7,8 @@
 #include <string>
 
 using namespace std;
+// The transaction class defines a change in an accounts balance
+// Those changes can be a deposit withdraw or addInterest.
 class Transaction {
 private:
 	int CustomerNumber;
@@ -15,6 +17,7 @@ private:
 	string Fees;
 public:
 	Transaction(int customerNumber, string transactionType, double amount, string fees);
+	// The amount of money that the transaction is in control of.
 	double getAmount();
 };
 #endif

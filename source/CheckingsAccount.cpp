@@ -39,7 +39,6 @@ double CheckingsAccount::withdraw(Transaction transaction)
 	return transaction.getAmount();
 }
 
-//
 double CheckingsAccount::addInterest()
 {
 	double amount = getCustomer()->getCheckInterest() * getBalance() + getBalance();

@@ -39,5 +39,10 @@ public:
 	virtual double deposit(Transaction transaction) = 0;
 	virtual double withdraw(Transaction transaction) = 0;
 	virtual double addInterest() = 0;
+	// These virtual functions expose the basic banking functions.
+	// Transaction - the transaction containing the money to deposit or withdraw.
+	// returns nothing.
+	// Appreciates teh balance according to the interest rate set in the customer class.
+	// It is the consumers responsibility to determine when to call add interest.
 };
 #endif

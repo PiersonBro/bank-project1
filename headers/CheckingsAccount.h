@@ -5,7 +5,8 @@
 #ifndef CheckingsAccount_h
 #define CheckingsAccount_h
 #include "Account.h"
-
+// CheckingsAccount is a concrete subclass of account.
+// See account for more documentation 
 class CheckingsAccount: public Account {
 public:
  	CheckingsAccount (Customer* customer ,int  balance, int accountNum);

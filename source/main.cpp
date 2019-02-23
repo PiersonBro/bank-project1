@@ -1,3 +1,7 @@
+///////////////////////
+// name: Karen and Ezekiel
+// last date modified: 2/22/2019
+////////////////////////
 #include <iostream>
 #include "Customer.h"
 #include "Senior.h"

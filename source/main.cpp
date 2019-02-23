@@ -31,8 +31,7 @@ void testAccountInfrastructure() {
     Transaction t1 (12121, " getting money", 500, "this is a fee");
 
     cout << "you took out $" << p1.withdraw(t1) << endl;
-    p1.addInterest() 
-    cout << "with intrest it will be $" << p1. << endl;
+    cout << "with intrest it will be $" << p1.addInterest() << endl;
 
     Senior s1("senior1", "there", 75, 78787878);
     SavingsAccount Ss1 (&s1, 800, 45465);

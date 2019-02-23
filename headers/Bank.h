@@ -17,6 +17,8 @@ private:
 	vector<Account *> accVector;
 	void addAccount(Account * account);
 public:
+	// Construct a bank object.
+	Bank();
 	// Create a new account for the given user with the given initialDeposit.
 	// If savings is true create a new savings account
 	// otherwise create a checking account.
@@ -30,10 +32,9 @@ public:
 	// Will throw a domain_error if amount is negative.
 	double MakeWithdrawal(double amount, Account * account);
 	// Get the account associated with the customer.
+	// Will search for a savings account if savings is true otherwise will search for a checking account.
 	// Throws an invalid_argument if customer is not in the vector. 
-	Account * GetAccount(Customer * customer);
-	// Construct a bank object.
-	Bank();
+	Account * GetAccount(Customer * customer, bool savings);
 };
 #endif
 

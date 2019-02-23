@@ -35,6 +35,7 @@ double CheckingsAccount::withdraw(Transaction transaction)
 		fees = "A fee of $" + std::to_string(getCustomer()->getOverdraftPenalty()) + " was added.";
 	}
 	Transaction t(0, "withdraw", amount, fees);
+	setBalance(t);
 	return transaction.getAmount();
 }
 

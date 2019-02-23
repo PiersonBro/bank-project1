@@ -44,15 +44,19 @@ double Bank::MakeWithdrawal(double amount, Account * account) {
         throw domain_error("cannot withdraw a nonpositive number");
     }
     Customer * customer = account->getCustomer();
-    Transaction t(customer->getAccountNum(), "deposit", amount, "");
+    Transaction t(customer->getAccountNum(), "withdrawal", amount, "");
     account->withdraw(t);
     return account->getBalance();
 }
 
-Account * Bank::GetAccount(Customer * customer) {
+Account * Bank::GetAccount(Customer * customer, bool savings) {
     for (int i = 0; i < accVector.size(); i++) {
         Account * account = accVector[i];
-        if (account->getCustomer() == customer) {
+        bool isSavings = false;
+        if (dynamic_cast<SavingsAccount *>(account)) {
+            isSavings = true;
+        }
+        if (account->getCustomer() == customer && savings == isSavings) {
             return account;
         }
     }
